@@ -1,0 +1,14 @@
+__pycache__/
+
+prototypes/input/*
+prototypes/output/*
+flask/erebus/static/documents/*
+flask/erebus/static/converted/*
+results/*
+
+!.gitkeep
+
+TODO.md
+
+*.pyc
+.env
