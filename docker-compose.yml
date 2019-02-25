@@ -1,13 +1,9 @@
 version: "3.4"
 services:
   flask:
-    container_name: erebus_flask
+    container_name: capstone_backend
     build:
-      context: ./flask
+      context: ./backend
       dockerfile: Dockerfile
     volumes:
-      - ./prototypes:/var/prototypes
-    ports:
-      - 5000:5000
-    env_file:
-      - ./.env
+      - ./src:/var/src
