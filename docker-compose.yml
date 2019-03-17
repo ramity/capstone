@@ -1,6 +1,6 @@
 version: "3.4"
 services:
-  flask:
+  backend:
     container_name: capstone_backend
     build:
       context: ./backend
