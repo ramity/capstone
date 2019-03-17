@@ -1,4 +1,3 @@
-from shapedetector import ShapeDetector
 import imutils
 import numpy as np
 import cv2
@@ -16,6 +15,8 @@ lower_white = np.array([0,0,255-sensitivity])
 upper_white = np.array([255,255,255])
 mask = cv2.inRange(hsv, lower_white, upper_white)
 res = cv2.bitwise_and(image, image, mask=mask)
+res = cv2.bilateralFilter(res, 9, 75, 75)
+
 
 cv2.imwrite("./output/mask.jpg", mask)
 cv2.imwrite("./output/res.jpg", res)
